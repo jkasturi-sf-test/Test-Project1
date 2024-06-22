@@ -23,3 +23,20 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+flows:
+    dependencies:
+        steps:
+            3:
+                task: assign_permission_set_licenses
+                options:
+                    api_names: CommerceMerchandiserUserPsl
+            4:
+                task: assign_permission_sets
+                options:
+                    api_names: Merchandiser
+    deploy_unmanaged:
+        steps:
+            '3.2':
+                task: assign_permission_sets
+                options:
+                    api_names: Merchandiser_Copy
