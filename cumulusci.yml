@@ -29,11 +29,11 @@ flows:
             3:
                 task: assign_permission_set_licenses
                 options:
-                    api_names: CommerceMerchandiserUserPsl
+                    api_names: CommerceMerchandiserUserPsl,CommerceUserPsl
             4:
                 task: assign_permission_sets
                 options:
-                    api_names: Merchandiser
+                    api_names: CommerceUser,Merchandiser
     deploy_unmanaged:
         steps:
             '3.2':
